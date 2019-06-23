@@ -1,6 +1,9 @@
 // LEGACY VERSION (non ES2015 syntax)
-function sselectionSort(arr){
+selectionSort([0,2,34,22,10,19,17]);
+
+function selectionSort(arr){
     for(var i = 0; i < arr.length; i++){
+        Console.Log(arr, i);
         var lowest = i;
         for(var j = i+1; j < arr.length; j++){
             if(arr[j] < arr[lowest]){
@@ -35,4 +38,4 @@ function selectionSort(arr) {
   return arr;
 }
 
-selectionSort([0,2,34,22,10,19,17]);
+
