@@ -16,10 +16,12 @@ function selectionSortTest(array) {
         }
 
         console.log(indexMin);
-        var temp = array[i];
-        array[i] = array[indexMin];
-        array[indexMin] = temp;
-        console.log(array);
+        if (i !== indexMin){
+            var temp = array[i];
+            array[i] = array[indexMin];
+            array[indexMin] = temp;
+            console.log(array);
+        }
         
     }
     return array;
