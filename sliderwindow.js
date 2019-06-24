@@ -13,7 +13,7 @@ function maxSubArray(arr, num){
             max = temp;
         }
     }
-    return max;
+    return max
 }
 
 console.log(maxSubArray([5,1,3,4,6,2,4],3));
