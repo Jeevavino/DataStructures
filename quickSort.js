@@ -1,5 +1,5 @@
-function findPivotIndex(arr, start=0, end=arr.length-1){
-    let pivotValue= arr[0]
+function findPivotIndex(arr, start=0, end=arr.length){
+    let pivotValue= arr[start]
     let pivotIndex =0;
     var swap = function (array, index1, index2) {
         var aux = array[index1];
@@ -9,14 +9,15 @@ function findPivotIndex(arr, start=0, end=arr.length-1){
 
     for(let i = start+1; i<end; i++){
         if(pivotValue > arr[i]){
-            
-            swap(arr, pivotIndex, i);
             pivotIndex++;
+            swap(arr, pivotIndex, i);
+           
             console.log(arr);
         }
     }
-//console.log(arr);
-    swap(arr, 0, pivotIndex);
+//
+    swap(arr, start, pivotIndex);
+    console.log(arr);
 
     return pivotIndex;
 
@@ -25,5 +26,5 @@ function findPivotIndex(arr, start=0, end=arr.length-1){
 
 console.log(findPivotIndex([4,3,1,6,2]))
 
-3,1,2,4,6
+
 
