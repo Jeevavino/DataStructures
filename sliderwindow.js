@@ -4,8 +4,8 @@ function maxSubArray(arr, num){
     var iCounter = arr.length - num+1;
     for(var i = 0; i< iCounter; i++){
         var temp = 0;
-        var counter = i + num-1;
-        for(var j = i; j <= counter ; j++){
+       // var counter = i + num-1;
+        for(var j = i; j <= num-1 ; j++){
             temp += arr[j];
         }
 
