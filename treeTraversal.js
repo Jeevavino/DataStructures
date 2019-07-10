@@ -122,6 +122,11 @@ tree.insert(20);
 tree.DFSPreOrder();
 tree.DFSPostOrder();
 tree.DFSInOrder();
+console.log(tree.BFS());
 
+
+ //       10 
+//    6           15
+// 3       8           20
 
 

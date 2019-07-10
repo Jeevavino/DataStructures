@@ -120,8 +120,7 @@ class SinglyLinkedList {
 
         var foundNode = this.get(index -1);
         let toDeletNode = foundNode.next;
-        let afterNode = toDeletNode.next ;
-        foundNode.next = afterNode;
+        foundNode.next = toDeletNode.next;
         
         this.length--;
         return toDeletNode;
@@ -144,8 +143,8 @@ var list = new SinglyLinkedList()
 list.push("HELLO");
 list.push("GOODBYE");
 list.push("!");
-list.remove(1);
-console.log(list.print());
+
+console.log(list);
 
 
 

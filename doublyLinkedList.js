@@ -47,9 +47,9 @@ class DoublyLinkedList {
             this.head = null;
             this.tail = null;
         }else{
-            this.head = oldHead.next;
-            this.head.prev = null;
-            oldHead.next = null;
+            let currentHead = oldHead.next;
+            currentHead.prev = null;
+            this.head = currentHead;
         }
         this.length--;
         return oldHead;
@@ -115,3 +115,4 @@ var list = new DoublyLinkedList()
 list.push("Harry")
 list.push("Ron")
 list.push("Hermione")
+console.log(list.shift());

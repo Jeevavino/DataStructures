@@ -8,3 +8,5 @@ function fibonacci(num){
 
 console.log(fibonacci(4));
 
+    3 + 2
+    
