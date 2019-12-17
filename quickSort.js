@@ -36,5 +36,5 @@ function quickSort(arr, left=0, right=arr.length){
 
 
 
-console.log(quickSort([4,1,3,5,7,9,8]));
+console.log(findPivotIndex([4,1,3,5,7,9,8]));
 

@@ -1,0 +1,85 @@
+<table border='1'><tr>
+						<td id="hRoamedCountry" class='header'>Roamed Country</td>
+						<td id="vVisitedCountry" class="ng-binding">Zimbabwe</td>
+					</tr>
+<tr>
+						<td id="hVisitedOperator" class='header'>Visited Operator</td>
+						<td id="vVisitedOperator" class="ng-binding">ZWEET (64804 = Econet Wireless Zimbabwe)</td>
+					</tr>
+<tr>
+						<td id="hCallDate" class='header'>Call Date &amp; Time</td>
+						<td id="vCallDateTime" class="ng-binding">4 Sep 2019 11:14:24 </td>
+					</tr>
+<tr>
+						<td id="hTimeBand" class='header'>Time Band</td>
+						<td id="vTimeBand" class="ng-binding">Independent of day and time</td>
+					</tr>
+<tr>
+						<td id="hChargeType" class='header'>Airtime Charge</td>
+						<td id="vChargeTypeBlock">
+							<table class='red'>
+								<tbody><tr>
+									<td colspan="2" class="ng-binding">Total Duration in Seconds</td>
+									<td><b class="ng-binding">119</b></td>
+								</tr>
+								<tr>
+									<td>[A] Block</td>
+									<td>[B] Rate</td>
+									<td>Block * Rate</td>
+								</tr>
+								<!-- ngRepeat: block in op.blockArr --><tr ng-repeat="block in op.blockArr" class="ng-scope">
+										<td><b class="ng-binding">1*60</b></td>
+										<td><b class="ng-binding">0.800000011921</b></td>
+										<td><b class="ng-binding">0.800000011921</b></td>
+								</tr><!-- end ngRepeat: block in op.blockArr --><tr ng-repeat="block in op.blockArr" class="ng-scope">
+										<td><b class="ng-binding">2*30</b></td>
+										<td><b class="ng-binding">0.4000000059605</b></td>
+										<td><b class="ng-binding">0.800000011921</b></td>
+								</tr><!-- end ngRepeat: block in op.blockArr -->
+								<tr>
+									<td colspan="1"></td>
+									<td>Subtotal</td>
+									<td><b class="ng-binding">1.600000023842</b></td>
+								</tr>
+
+								<tr>
+									<td colspan="2">[C] Currency Unit <b class="ng-binding">USD</b> per SDR</td>
+									<td><b class="ng-binding">1.3701</b></td>
+								</tr>
+								<tr>
+									<td colspan="2">[D] Total : (Block * Rate)/Currency</td>
+									<td><b class='blue'>1.1678</b></td>
+								</tr>
+								<tr>
+									<td colspan="2">UI Computed Charge</td>
+									<td><b class='red'>1.1678</b></td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+<tr>
+						<td id="hAmountCharged" class='header'>Amount Charged</td>
+						<td id="vAmountChargedBlock">
+							<!-- ngIf: !isMultiStepValue --><p ng-if="!isMultiStepValue" class="ng-scope">
+								[D] Charged SDR = <b class='blue'>1.1678</b>
+							</p><!-- end ngIf: !isMultiStepValue -->
+							<!-- ngIf: isMultiStepValue -->
+
+
+
+
+							<p><!-- ngIf: !isMultiStepValue --><span ng-if="!isMultiStepValue" class="ng-scope">[E]</span><!-- end ngIf: !isMultiStepValue --> <!-- ngIf: isMultiStepValue --> Currency <b class="ng-binding">CHF</b> per SDR = <b class="ng-binding">1.3531</b></p>
+							<p><!-- ngIf: !isMultiStepValue --><span ng-if="!isMultiStepValue" class="ng-scope">[D*E=F]</span><!-- end ngIf: !isMultiStepValue --> <!-- ngIf: isMultiStepValue --> Final Amount in <b class="ng-binding">CHF:</b>
+								<span class="amountCharged ng-binding">
+									<b class='blue'>1.1678</b> * 1.3531 = 
+									<b class='blue'>1.5802</b>
+								</span>
+							</p>
+							<!-- ngIf: op.tax.rate > 0 -->
+							<!-- ngIf: op.tax.rate > 0 -->
+							<!-- ngIf: vm.markup > 0 -->
+							<!-- ngIf: op.tax.rate > 0 -->
+						</td>
+                    </tr>
+                    
+</table>

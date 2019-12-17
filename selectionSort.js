@@ -37,5 +37,5 @@ function selectionSort(arr) {
 
   return arr;
 }
-
+console.log(selectionSort([18,4,2,6,3,7,8]));
 
